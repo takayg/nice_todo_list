@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container">
+    <div class="card-deck">
+        <div class="row">
+            {% for entry in entries %}
+            <div class="col-sm-4">
+                <div class="card p-3 text-center">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ entry.title }}</h4>
+                        <img src={{ entry.directory }} alt="Card image" class="img-fluid">
+                        <a href="{{ url_for('make_image', id=entry.id) }}" class="card-link">この画像を背景にする</a>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            投稿がありません
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

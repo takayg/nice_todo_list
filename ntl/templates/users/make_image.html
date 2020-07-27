@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+<br><br><br><br>
+<div class="container">
+    <div class="form-group">
+        <form class="form-signin" action="/make/{{ entry.id }}" method=post>
+            <h2>タイトル</h2>
+            <input type="title" id="inputText" class="form-control" placeholder="Title1" autofocus name=title1>
+            <input type="title" id="inputText" class="form-control" placeholder="Title2" autofocus name=title2>
+            <br><br>
+            <h2>内容(10個まで)</h2>
+            <input type="text" id="inputText" class="form-control" placeholder="sentence1" name=sentence1>
+            <input type="text" id="inputText" class="form-control" placeholder="sentence2"  name=sentence2>
+            <input type="text" id="inputText" class="form-control" placeholder="sentence3"  name=sentence3>
+            <input type="text" id="inputText" class="form-control" placeholder="sentence4"  name=sentence4>
+            <input type="text" id="inputText" class="form-control" placeholder="sentence5"  name=sentence5>
+            <input type="text" id="inputText" class="form-control" placeholder="sentence6"  name=sentence6>
+            <input type="text" id="inputText" class="form-control" placeholder="sentence7"  name=sentence7>
+            <input type="text" id="inputText" class="form-control" placeholder="sentence8"  name=sentence8>
+            <input type="text" id="inputText" class="form-control" placeholder="sentence9"  name=sentence9>
+            <input type="text" id="inputText" class="form-control" placeholder="sentence10"  name=sentence10>
+            <button class="btn btn-primary btn-block" type="submit">Make Image</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
